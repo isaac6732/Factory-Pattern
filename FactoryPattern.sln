@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{5A98575E-259D-42D8-8848-50B7F850108D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{5A98575E-259D-42D8-8848-50B7F850108D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory-Patern", "Factory-Patern\Factory-Patern.csproj", "{8C1037A8-91D5-4366-90E9-79B199EBF456}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9307E108-91D2-42AD-ACAA-4FE54251968D}"
+	ProjectSection(SolutionItems) = preProject
+		VehicleFactory.cs = VehicleFactory.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{5A98575E-259D-42D8-8848-50B7F850108D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A98575E-259D-42D8-8848-50B7F850108D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A98575E-259D-42D8-8848-50B7F850108D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1037A8-91D5-4366-90E9-79B199EBF456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1037A8-91D5-4366-90E9-79B199EBF456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1037A8-91D5-4366-90E9-79B199EBF456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1037A8-91D5-4366-90E9-79B199EBF456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
