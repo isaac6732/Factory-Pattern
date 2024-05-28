@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern
 {
-    public class Motarcycle : IVehicle
+    public class Motorcycle : IVehicle
     {
-        public string color { get; set; }
-
-        public bool TowWheels { get; set; }
 
         public void Drive()
         {

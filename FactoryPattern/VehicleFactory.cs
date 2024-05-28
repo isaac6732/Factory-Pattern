@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern
 {
-    class VehicleFactory
-    {
-        public IVehicle CreateVehicle(string userInput)
-        {
-            switch (userInput.ToLower())
-            {
-                case "car":
-                    return new Car() { Color = "Red", IsDriveable = true };
-                case "motorcycle":
-                    return new Motarcycle();
-                default:
-                    return new Car();
+	public static class VehicleFactory
+	{
+
+		public static IVehicle GetVehicle(int numberOfTires)
+		{
+			switch (numberOfTires)
+			{
+				case 4:
+					return new Car();
+				case 2:
+					return new Motorcycle();
+				default:
+					throw new ArgumentException("Invalid number of tires");
+			}
+		}
 
 
-            }
-        }
-    }
+	}
 }

@@ -1,19 +1,39 @@
 ﻿namespace FactoryPattern
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello what type of vehicle you whant to make Car/Motarcycle");
-            string userInput = Console.ReadLine();
 
-            VehicleFactory factory = new VehicleFactory();
-            IVehicle myCar = factory.CreateVehicle(userInput);
 
-            myCar.Drive();
+	public class Program
+	{
+		static void Main(string[] args)
+		{
+			bool continueCreating = true;
 
-            Console.WriteLine("Whant to make another vehicle");
-            userInput = Console.ReadLine();
-        }
-    }
+			while (continueCreating)
+			{
+				Console.WriteLine("Enter the number of tires for the vehicle:");
+				if (int.TryParse(Console.ReadLine(), out int numberOfTires))
+				{
+					try
+					{
+						IVehicle myVehicle = VehicleFactory.GetVehicle(numberOfTires);
+						myVehicle.Drive();
+					}
+					catch (ArgumentException ex)
+					{
+						Console.WriteLine(ex.Message);
+					}
+				}
+				else
+				{
+					Console.WriteLine("Please enter a valid number.");
+				}
+                Console.WriteLine();
+                Console.WriteLine("Do you want to create another vehicle? (yes/no)");
+                string userResponse = Console.ReadLine().ToLower();
+				continueCreating = userResponse == "yes";
+				Console.WriteLine();
+			}
+		}
+	}
+
 }
